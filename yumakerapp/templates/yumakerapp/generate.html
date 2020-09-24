@@ -1,0 +1,63 @@
+{% extends 'yumakerapp/base.html' %}
+{% block content %}
+<div class="col-md-6 offset-md-3 mt-5">
+    <h1> Enter video credentials </h1>
+    <hr>
+    <form method="POST" enctype="multipart/form-data" action="{% url 'upload' %}">
+        {% csrf_token %}
+         <div class="form-group">
+         <label for="title">Title</label>
+           <input type="text" id="title" name="title" class="form-control" placeholder="Enter video title" required="required">
+         </div>
+        <div class="form-group">
+            <label for="desc">Description</label>
+            <textarea class="form-control" name="desc" id="desc" rows="4" cols="50" required="required" placeholder="Enter video description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="tag">Video Tags</label>
+            <input  class ="form-control "type="text" id="tag" name="tag" placeholder="Separate video tags with comma">
+        </div>
+        <div class="form-group">
+            <label for="cat">Video Category</label>
+        <select id="cat" name="cat" class="form-control">
+            <option value="1">Film &amp; Animation</option>
+            <option value="2">Cars &amp; Vehicles</option>
+            <option value="10" selected="yes">Music</option>
+            <option value="15">Pets &amp; Animals</option>
+            <option value="17">Sports</option>
+            <option value="19">Travel &amp; Events</option>
+            <option value="20">Gaming</option>
+            <option value="22">People &amp; Blogs</option>
+            <option value="23">Comedy</option>
+            <option value="24">Entertainment</option>
+            <option value="25">News &amp; Politics</option>
+            <option value="26">How to &amp; Style</option>
+            <option value="27">Education</option>
+            <option value="28">Science &amp; Technology</option>
+            <option value="29">Nonprofits &amp; Activism</option>
+        </select>
+        </div>
+        <hr>
+         <div class="form-group">
+             <label>public: </label>
+            <input type="radio" value="public" name="radio"><br>
+              <label>private: </label>
+             <input type="radio" value="private" name="radio">
+         </div>
+        <hr>
+        <div class="form-group mt-3">
+            <label class="mr-2">Upload Image:</label>
+            <input type="file" name="image" accept="image/*">
+        </div>
+        <div class="form-group mt-3">
+            <label class="mr-2">Upload Audio:</label>
+            <input type="file" name="audio" accept="audio/*">
+        </div>
+        <hr>
+        <div class="container text-center">
+            <button type="submit" class="btn btn-primary">Generate Video & Upload</button>
+        </div>
+      </form>
+</div>
+{% endblock %}
+

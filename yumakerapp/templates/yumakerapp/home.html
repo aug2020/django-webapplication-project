@@ -1,0 +1,20 @@
+{% extends 'yumakerapp/base.html' %}
+{% block content %}
+
+      <div class="row justify-content-center my-3">
+          <div class="col-5">
+               <img src="{ }" style="width:500px;height:600px;">
+          </div>
+    </div>
+      <div class="container text-center">
+      <h1>Sign-In to your youtube account to start uploading your beats</h1>
+      <br>
+            <a href="{% url 'login' %}" > <img src=/media/google.png> </a>
+      </div>
+       <div class="row justify-content-center mb-3">
+         <div class="col-md-9 text-center">
+        <h1> Beat-loader is a free and safe  way to quickly create and upload your type beats to youtube. With speed and effiency </h1>
+    </div>
+    </div>
+  <hr>
+{% endblock %}
