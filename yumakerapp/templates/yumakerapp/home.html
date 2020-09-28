@@ -2,14 +2,16 @@
 {% block content %}
 
       <div class="row justify-content-center my-3">
-          <div class="col-5">
-               <img src="{ }" style="width:500px;height:600px;">
+          <div class="span12">
+            {%load static %}
+               <img src="{% static 'yumakerapp/mp3toyoutube.png' %}" width="200">
           </div>
     </div>
       <div class="container text-center">
       <h1>Sign-In to your youtube account to start uploading your beats</h1>
       <br>
-            <a href="{% url 'login' %}" > <img src=/media/google.png> </a>
+          {% load static %}
+            <a href="{% url 'login' %}" > <img src="{% static 'yumakerapp/google.png' %}"> </a>
       </div>
        <div class="row justify-content-center mb-3">
          <div class="col-md-9 text-center">

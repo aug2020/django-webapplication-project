@@ -26,6 +26,11 @@ RETRIABLE_STATUS_CODES = [500, 502, 503, 504]
 global is_authorize
 is_authorize = False
 
+def aboutus(request):
+    return render(request,'yumakerapp/aboutus.html')
+
+def howitworks(request):
+    return render(request,'yumakerapp/howitworks.html')
 def home(request):
     return render(request,'yumakerapp/home.html')
 

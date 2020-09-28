@@ -25,7 +25,9 @@ urlpatterns = [
     path('generate/', views.generate, name='generate'),
     path('login/', views.login, name='login'),
     path('upload/',views.upload_video, name='upload'),
-    path('oauth2callback/', views.authorize, name='oauth2callback')
+    path('oauth2callback/', views.authorize, name='oauth2callback'),
+    path('aboutus/',views.aboutus,name='aboutus'),
+    path('howitworks/',views.howitworks,name='howitworks')
 ]
 if settings.DEBUG: #if we are in debug mode so on our own server we will use the static and media url on my local machine
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
